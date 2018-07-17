@@ -1,1 +1,2 @@
-web: node app.js
+npm deploy
+npm start
