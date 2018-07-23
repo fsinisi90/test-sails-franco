@@ -34,7 +34,8 @@ module.exports.routes = {
   'GET /account/password':   { action: 'account/view-edit-password' },
   'GET /account/profile':    { action: 'account/view-edit-profile' },
   
-  'GET /account/printer':    { action: 'account/printer' },
+  'GET /printer/create':    { action: 'printer/create' },
+  'GET /printer/register':    { action: 'printer/register' },
 
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
