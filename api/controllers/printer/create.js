@@ -19,12 +19,12 @@ module.exports = {
   fn: async function (inputs, exits) {
 
     await Printer.create({
-	  name: sails.faker.name.findName(),
-	  model: sails.faker.name.findName(),
+	  name: sails.faker.name.findName() + '\'s printer',
+	  model: "Prusa MK3",
 	  owner: this.req.me.id
 	});
 
-    return exits.success();
+    //return exits.success();
 
   }
 

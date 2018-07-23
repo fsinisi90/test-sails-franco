@@ -1,0 +1,12 @@
+<div id="list-printers">
+    <h1>List of printers</h1>
+
+     <button onClick="Cloud.create().exec()">Create new printer</button>
+
+    <ul>
+        <% for (printer in printers) { %>
+        <li><%= printers[printer].name %> (<%= printers[printer].model %>) <button onClick="Cloud.register(<%= printers[printer].id %>).exec()">Register</button></li>
+        <% } %>
+    </ul>
+</div>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
