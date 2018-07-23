@@ -11,6 +11,8 @@
 
 module.exports.bootstrap = async function(done) {
 
+  sails.WebSocket = require('ws');
+
   // Import dependencies
   var path = require('path');
 
