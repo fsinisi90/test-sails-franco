@@ -1,12 +1,15 @@
 module.exports = {
 
-  friendlyName: 'Register printer',
+  friendlyName: 'Update status',
 
-  description: 'Register a printer in Cloud Factory through WebSockets.',
+  description: 'Update the status of a printer.',
 
   inputs: {
     id: {
       type: 'number'
+    },
+    status: {
+      type: 'string'
     }
   },
 
@@ -34,10 +37,9 @@ module.exports = {
           channel: 'CloudFactory::ServicesChannel',
           }),
           data: JSON.stringify({
-          action: 'register',
+          action: 'update_status',
           printer_name: printer.name,
-          printer_model: printer.model,
-          factory_name: 'Factory1'
+          status: inputs.status
           }),
         };
         

@@ -53,6 +53,7 @@ module.exports.routes = {
   'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
   'POST  /api/v1/create':                                { action: 'printer/create' },
   'POST  /api/v1/printer/register/:id':                  { action: 'printer/register' },
+  'POST  /api/v1/printer/update-status/:id/:status':     { action: 'printer/update-status' },
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗

@@ -5,7 +5,12 @@
 
     <ul>
         <% for (printer in printers) { %>
-        <li><%= printers[printer].name %> (<%= printers[printer].model %>) <button onClick="Cloud.register(<%= printers[printer].id %>).exec()">Register</button></li>
+        <li><%= printers[printer].name %> (<%= printers[printer].model %>)
+        	<button onClick="Cloud.register(<%= printers[printer].id %>).exec()">Register</button>
+        	<button onClick="Cloud.updateStatus(<%= printers[printer].id %>, 'ready').exec()">Ready</button>
+        	<button onClick="Cloud.updateStatus(<%= printers[printer].id %>, 'offline').exec()">Offline</button>
+        	<button onClick="Cloud.updateStatus(<%= printers[printer].id %>, 'error').exec()">Error</button>
+        </li>
         <% } %>
     </ul>
 </div>
